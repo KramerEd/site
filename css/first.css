@@ -1,0 +1,176 @@
+.first {
+	font-family: "Play";
+	text-align: center;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+.header .container {
+	height: 80px;
+	display: flex;
+	justify-content: flex-end;
+	background: #ff7500;
+}
+
+.header__links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	padding: 0 3rem;
+}
+.header__links a {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	color: #ffffff;
+	font-family: "Play";
+
+	position: relative;
+
+	text-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04),
+		0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
+		0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+.header__links a::after {
+	content: "";
+	position: absolute;
+	height: 3px;
+	width: 0%;
+	background: rgb(255, 255, 255);
+	bottom: -10%;
+	left: 0;
+	transition: 1s;
+}
+.header__links a:hover::after {
+	width: 100%;
+}
+
+.first__title {
+	margin-top: 80px !important;
+	font-size: clamp(46px, 70%, 64px);
+	max-width: 850px;
+	line-height: 74px;
+	color: #000000;
+	margin: 0 auto;
+}
+.first__tel {
+	font-size: 36px;
+	line-height: 42px;
+}
+.first__text {
+	font-size: 18px;
+	line-height: 21px;
+	margin-bottom: 3rem;
+}
+.first__butt {
+	background: #ff7500;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px 30px;
+	color: #ffffff;
+	margin-bottom: 4rem;
+	transition: 500ms;
+}
+.first__butt:hover {
+	transform: translateY(-5%);
+	background: #ff9538;
+}
+
+.first__moretext {
+	font-size: 12px;
+	line-height: 14px;
+	text-align: justify;
+	max-width: 500px;
+	color: #000000;
+	margin-bottom: 4rem;
+	margin: 0 auto;
+}
+
+@keyframes pop-in {
+	0% {
+		transform: translate(1000px);
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0);
+	}
+}
+.first__logo {
+	display: none;
+}
+.first__img {
+	display: none;
+}
+@media (min-width: 1210px) {
+	.first__title {
+		margin-bottom: 5rem;
+	}
+	.first .container {
+		display: flex;
+		align-items: center;
+	}
+	.first {
+		text-align: left;
+	}
+	.header .container {
+		background: transparent;
+	}
+
+	.first__logo {
+		font-family: "Neuropol";
+		font-weight: 500;
+		font-size: 450px;
+		line-height: 300px;
+
+		position: absolute;
+		right: 5%;
+		top: 10%;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px rgba(255, 151, 0, 0.3),
+			-1px -1px 2px rgba(177, 83, 0, 0.5);
+
+		transform: translate(-1000px);
+		animation: pop-in 1s forwards;
+		display: block;
+	}
+	.orange {
+		width: 700px;
+		height: 580px;
+		background: rgba(255, 117, 0, 0.75);
+
+		position: absolute;
+		z-index: -1;
+		right: -5%;
+
+		transform: skew(10deg);
+	}
+	.first__img {
+		position: absolute;
+		bottom: 0;
+		left: 45%;
+		max-width: 270px;
+		max-height: 260px;
+		display: block;
+	}
+	.header .container::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -29%;
+		background: white;
+		width: 350px;
+		height: 682px;
+		overflow-x: hidden;
+	}
+}

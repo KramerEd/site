@@ -1,0 +1,21 @@
+.sixth {
+	font-family: Play;
+	padding: 0 15px;
+}
+
+.title {
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 4rem 0 2rem;
+}
+.sixth ul {
+}
+.sixth li {
+	padding-left: 10px;
+	font-size: 16px;
+	line-height: 26px;
+}
+.sixth li::marker {
+	content: "•";
+}

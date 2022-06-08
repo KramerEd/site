@@ -1,0 +1,52 @@
+.second {
+	font-family: "Play";
+	background: rgb(46, 48, 78);
+	border-radius: 15px 0px 0px 15px;
+}
+.container {
+}
+.second__text {
+	max-width: 500px;
+	margin: 2rem auto;
+	background: rgb(46, 48, 78);
+	color: #fff;
+	padding: 15px 20px;
+}
+.second__text p {
+	text-align: justify;
+	font-size: clamp(12px, 1em, 18px);
+	margin-bottom: 1rem;
+}
+@media (min-width: 1210px) {
+	.second {
+		font-family: "Play";
+		background: transparent;
+	}
+	.second__text p {
+		text-align: justify;
+		font-size: clamp(12px, 1em, 18px);
+		font-size: 21px;
+	}
+	.second__text {
+		margin: 3rem auto 0;
+		max-width: 1200px;
+		background: none;
+		color: #000;
+		padding: 0;
+	}
+	.second__text::before {
+		content: "";
+		width: 18px;
+		height: 100%;
+		position: absolute;
+		background: rgba(255, 151, 0, 0.9);
+		border-radius: 15px 0px 0px 15px;
+	}
+	.second__text p {
+		margin: 15px 0;
+		padding-left: 5rem;
+		font-size: 18px;
+		line-height: 21px;
+		text-align: justify;
+	}
+}

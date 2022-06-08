@@ -1,0 +1,146 @@
+@import "./first.css";
+@import "./second.css";
+@import "./third.css";
+@import "./fourth.css";
+@import "./fifth.css";
+@import "./sixth.css";
+@import "./seventh.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+@font-face {
+	font-family: "Neuropol";
+	src: url("../fonts/neuropol.otf") format("otf");
+}
+
+:root {
+	--primary: var(rgba(255, 117, 0, 0.75));
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+	position: relative;
+}
+.burger {
+	position: absolute;
+	top: 25%;
+	left: 10px;
+	padding: 20px;
+}
+.header__burger {
+	position: relative;
+	width: 24px;
+	height: 2px;
+	background: #fff;
+	transition: 0.5s;
+}
+.header__burger::after,
+.header__burger::before {
+	content: "";
+	position: absolute;
+	transition: 0.5s;
+
+	width: 24px;
+	height: 2px;
+	background: #fff;
+}
+.header__burger::after {
+	top: -6px;
+	left: 0;
+}
+.header__burger::before {
+	top: 6px;
+	left: 0;
+}
+
+.header__burger.active {
+	width: 0;
+}
+.header__burger.active::after {
+	transform: rotate(-45deg);
+	top: 0;
+}
+.header__burger.active::before {
+	transform: rotate(45deg);
+	top: 0;
+}
+sub {
+	text-align: center;
+}

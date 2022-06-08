@@ -1,0 +1,37 @@
+.seventh {
+	font-family: Play;
+}
+.container {
+}
+.seventh__flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	gap: 40px;
+}
+.seventh__title {
+	font-size: 52px;
+	line-height: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 4rem 0 2rem;
+}
+.seventh__item {
+	flex: 1 1 48%;
+}
+.seventh__item li::marker {
+	content: "-";
+}
+
+.seventh__item li {
+	margin: 0 1rem;
+	font-size: 18px;
+	line-height: 27px;
+	padding-left: 10px;
+}
+.seventh__item-title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+}
