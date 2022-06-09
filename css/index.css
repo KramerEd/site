@@ -82,6 +82,14 @@ h6 {
 	font-size: inherit;
 	font-weight: inherit;
 }
+html,
+body {
+	min-height: 1000vh;
+	position: relative;
+}
+body.active {
+	overflow: hidden;
+}
 
 @font-face {
 	font-family: "Neuropol";
@@ -98,49 +106,66 @@ h6 {
 	padding: 0 10px;
 	position: relative;
 }
-.burger {
-	position: absolute;
-	top: 25%;
-	left: 10px;
-	padding: 20px;
-}
-.header__burger {
-	position: relative;
-	width: 24px;
-	height: 2px;
-	background: #fff;
-	transition: 0.5s;
-}
-.header__burger::after,
-.header__burger::before {
-	content: "";
-	position: absolute;
-	transition: 0.5s;
 
-	width: 24px;
-	height: 2px;
-	background: #fff;
-}
-.header__burger::after {
-	top: -6px;
-	left: 0;
-}
-.header__burger::before {
-	top: 6px;
-	left: 0;
-}
-
-.header__burger.active {
-	width: 0;
-}
-.header__burger.active::after {
-	transform: rotate(-45deg);
-	top: 0;
-}
-.header__burger.active::before {
-	transform: rotate(45deg);
-	top: 0;
-}
 sub {
 	text-align: center;
+}
+.blur {
+	width: 100vw;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 1s ease-in-out;
+	z-index: -1;
+	height: 100vh;
+}
+.blur.active {
+	backdrop-filter: blur(1px);
+	background: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+	.burger {
+		position: absolute;
+		top: 15%;
+		left: 10px;
+		padding: 20px;
+	}
+	.header__burger {
+		position: relative;
+		width: 24px;
+		height: 2px;
+		background: #fff;
+		transition: 0.5s;
+	}
+	.header__burger::after,
+	.header__burger::before {
+		content: "";
+		position: absolute;
+		transition: 0.5s;
+
+		width: 24px;
+		height: 2px;
+		background: #fff;
+	}
+	.header__burger::after {
+		top: -6px;
+		left: 0;
+	}
+	.header__burger::before {
+		top: 6px;
+		left: 0;
+	}
+
+	.header__burger.active {
+		width: 0;
+	}
+	.header__burger.active::after {
+		transform: rotate(-45deg);
+		top: 0;
+	}
+	.header__burger.active::before {
+		transform: rotate(45deg);
+		top: 0;
+	}
 }
