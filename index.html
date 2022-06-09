@@ -11,11 +11,15 @@
 	<body>
 		<header class="header">
 			<div class="blur"></div>
+			<div class="blur-form"></div>
+
 			<nav class="container">
 				<div class="orange"></div>
 				<ul class="header__links">
-					<li class="header__link"><a href="#">о компании</a></li>
-					<li class="header__link"><a href="#">услуги</a></li>
+					<li class="header__link">
+						<a href="#first__title">о компании</a>
+					</li>
+					<li class="header__link"><a href="#services">услуги</a></li>
 					<li class="header__link"><a href="#">контакты</a></li>
 				</ul>
 				<div class="burger"><div class="header__burger"></div></div>
@@ -24,7 +28,7 @@
 		<div class="first">
 			<div class="container">
 				<div class="first__left">
-					<div class="first__title">
+					<div class="first__title" id="first__title">
 						Абонентское обслуживание компьютеров
 					</div>
 					<div class="first__tel">тел. +7 (343) 357-32-99</div>
@@ -181,7 +185,7 @@
 		<div class="sixth">
 			<div class="container">
 				<div class="title">
-					<h1>пеРЕЧЕНЬ УСЛУГ В РАМКАХ ДОГОВОРА</h1>
+					<h1 id="services">пеРЕЧЕНЬ УСЛУГ В РАМКАХ ДОГОВОРА</h1>
 				</div>
 				<ul>
 					<li>
@@ -285,6 +289,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="modal">
+			<span id="modal-close">X</span>
+			<p>Мы с вами свяжемся</p>
 		</div>
 	</body>
 </html>

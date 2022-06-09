@@ -84,8 +84,9 @@ h6 {
 }
 html,
 body {
-	min-height: 1000vh;
 	position: relative;
+	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
 }
 body.active {
 	overflow: hidden;
@@ -111,18 +112,34 @@ sub {
 	text-align: center;
 }
 .blur {
+	visibility: hidden;
+}
+.blur.active {
+	display: block;
 	width: 100vw;
-	background: transparent;
 	position: absolute;
 	top: 0;
 	left: 0;
 	transition: 1s ease-in-out;
-	z-index: -1;
 	height: 100vh;
-}
-.blur.active {
 	backdrop-filter: blur(1px);
 	background: rgba(0, 0, 0, 0.5);
+	visibility: visible;
+}
+.blur-form {
+	visibility: hidden;
+}
+.blur-form.active {
+	display: block;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 1s ease-in-out;
+	height: 100vh;
+	backdrop-filter: blur(1px);
+	background: rgba(0, 0, 0, 0.5);
+	visibility: visible;
 }
 @media (max-width: 768px) {
 	.burger {
@@ -168,4 +185,31 @@ sub {
 		transform: rotate(45deg);
 		top: 0;
 	}
+}
+.modal {
+	font-family: "Play";
+	width: 60vw;
+	height: 30vh;
+	background: #fff;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	transform: translateX(-50%);
+	top: 40%;
+	left: 50%;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
+	z-index: 1000;
+}
+.modal.active {
+	visibility: visible;
+	opacity: 1;
+}
+.modal span {
+	position: absolute;
+	top: 5%;
+	right: 5%;
 }
